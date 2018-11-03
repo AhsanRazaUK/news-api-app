@@ -17,8 +17,12 @@ export class NewsApiService {
     return this.http.get<NewsApiSource>(`${this.apiUrl}sources?apiKey=${this.apiKey}`);
   }
 
-  getTopHeadlines(country: string): Observable<Articles> {
-    return this.http.get<Articles>(`${this.apiUrl}top-headlines?country=${country}&apiKey=${this.apiKey}`);
+  // getTopHeadlines(country: string): Observable<Articles> {
+  //   return this.http.get<Articles>(`${this.apiUrl}top-headlines?country=${country}&apiKey=${this.apiKey}`);
+  // }
+
+  getTopHeadlines(country: string, category: string): Observable<Articles> {
+    return this.http.get<Articles>(`${this.apiUrl}top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}`);
   }
 
 }

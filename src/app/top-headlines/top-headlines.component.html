@@ -9,7 +9,7 @@
       </h3>
       <div class="mb-1 text-muted">{{headline.publishedAt}}</div>
       <p class="card-text mb-auto">{{headline.title}}</p>
-      <a href="#">Continue reading</a>
+      <a [attr.href]="headline.url" target="_blank">Continue reading</a>
     </div>
   </div>
 </div>

@@ -11,7 +11,9 @@ import { NewsApiService } from './shared/news-api-service/news-api.service';
 import { CountriesSelectComponent } from './shared/ui/countries-select/countries-select.component';
 import { CountriesService } from './shared/ui/countries-select/service/countries-service.service';
 import { TopHeadlinesComponent } from './top-headlines/top-headlines.component';
-import {MatCardModule } from '@angular/material';
+import { MatCardModule } from '@angular/material';
+import { AppRoutingModule } from './app-routing.module';
+import { CategoriesService } from './shared/ui/header/services/categories.service';
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
@@ -27,9 +29,9 @@ export function initializeApp(appConfig: AppConfig) {
     TopHeadlinesComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule,  MatCardModule 
+    BrowserModule, HttpClientModule, AppRoutingModule, MatCardModule
   ],
-  providers: [AppConfig, { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [AppConfig], multi: true }, NewsApiService, CountriesService],
+  providers: [AppConfig, { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [AppConfig], multi: true }, NewsApiService, CountriesService, CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
