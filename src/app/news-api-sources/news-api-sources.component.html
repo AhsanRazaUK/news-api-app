@@ -1,0 +1,5 @@
+<a [attr.href]="'//' + source.url" target="_blank" [title]="source.name" *ngFor="let source of NewsSources">
+  <mat-card class="bg-light" style="padding: 5px;">
+    <mat-card-title>{{source.name}}</mat-card-title>
+    <span style="width:2em; line-height: 2em;float: left;" class="flag-icon flag-icon-{{source.country | lowercase}}"></span>
+    <img mat-card-sm-image [attr.src]="'https://icon-locator.herokuapp.com/icon?url=' + source.url + '&size=70..120..200'"> </mat-card> </a>

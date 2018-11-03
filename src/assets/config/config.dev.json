@@ -1,0 +1,22 @@
+{
+    "env": {
+        "name": "DEV"
+    },
+    "appInsights": {
+        "instrumentationKey": "<dev-guid-here>"
+    },
+    "logging": {
+        "console": true,
+        "appInsights": false
+    },
+    "aad": {
+        "requireAuth": true,
+        "tenant": "<dev-guid-here>",
+        "clientId": "<dev-guid-here>",
+        "apiKey": "666fe99be98e451a803da7e6fc96f62a"
+    },
+    "apiServer": {
+        "metadata": "https://newsapi.org/v2/",
+        "rules": ""
+    }
+}

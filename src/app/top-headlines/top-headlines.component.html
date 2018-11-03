@@ -1,0 +1,15 @@
+<div *ngFor="let headline of TopHeadlines" class="flex-md-row">
+  <div class="card flex-md-row mb-4 box-shadow h-md-250">
+    <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
+      style="width: 200px; height: 250px;" [src]="headline.urlToImage" data-holder-rendered="true">
+    <div class="card-body d-flex flex-column align-items-start">
+      <strong class="d-inline-block mb-2 text-primary">{{headline.author}}</strong>
+      <h3 class="mb-0">
+        <a class="text-dark" href="#">{{headline.source.name}}</a>
+      </h3>
+      <div class="mb-1 text-muted">{{headline.publishedAt}}</div>
+      <p class="card-text mb-auto">{{headline.title}}</p>
+      <a href="#">Continue reading</a>
+    </div>
+  </div>
+</div>
