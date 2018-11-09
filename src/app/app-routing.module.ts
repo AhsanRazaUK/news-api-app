@@ -1,16 +1,24 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { TopHeadlinesComponent } from "./top-headlines/top-headlines.component";
+import { CategoriesService } from "./shared/ui/header/services/categories.service";
 
-const routes: Routes = [
+let routes: Routes = [
     { path: '', component: TopHeadlinesComponent },
-    { path: 'top-headlines/:category', component: TopHeadlinesComponent }
+    { path: 'politics', component: TopHeadlinesComponent },
+    { path: 'business', component: TopHeadlinesComponent },
+    { path: 'entertainment', component: TopHeadlinesComponent },
+    { path: 'technology', component: TopHeadlinesComponent },
+    { path: 'science', component: TopHeadlinesComponent },
+    { path: 'health', component: TopHeadlinesComponent }
 ];
 
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-})
+@NgModule(
+    {
+        providers: [CategoriesService],
+        imports: [RouterModule.forRoot(routes)],
+        exports: [RouterModule]
+    })
 
 export class AppRoutingModule {
 }

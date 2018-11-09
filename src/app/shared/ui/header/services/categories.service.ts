@@ -9,7 +9,7 @@ export class CategoriesService {
 
   GetCategories(): Observable<any> {
 
-    return this.http.get<any>('../services/categories.json');
-
-  }
+    const jsonFile = `assets/categories.json`;
+    return this.http.get<any>(jsonFile);
+ }
 }

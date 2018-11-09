@@ -31,7 +31,8 @@ export function initializeApp(appConfig: AppConfig) {
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule, MatCardModule
   ],
-  providers: [AppConfig, { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [AppConfig], multi: true }, NewsApiService, CountriesService, CategoriesService],
+  providers: [AppConfig, { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [AppConfig], multi: true }, 
+  NewsApiService, CountriesService, CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
